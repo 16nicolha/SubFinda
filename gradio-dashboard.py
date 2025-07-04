@@ -13,7 +13,7 @@ import docx
 load_dotenv()
 
 # === Load and prepare database ===
-mags = pd.read_csv("cleaned_litMags.csv")
+mags = pd.read_csv("cleaned_Mags.csv")
 raw_documents = TextLoader("tagged_description.txt", encoding="utf-8").load()
 text_splitter = CharacterTextSplitter(chunk_size=0, chunk_overlap=0, separator="\n")
 documents = text_splitter.split_documents(raw_documents)
